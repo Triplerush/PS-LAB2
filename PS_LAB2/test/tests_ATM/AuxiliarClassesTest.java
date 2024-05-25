@@ -65,7 +65,7 @@ public class AuxiliarClassesTest {
     @Test
     public void testDebitInsufficientFunds() {
         bankDatabase.debit(12345, 1100.0);
-        assertEquals(0.0, bankDatabase.getAvailableBalance(12345), 0.01);
+        assertEquals(1000.0, bankDatabase.getAvailableBalance(12345), 0.01);
     }
 }
 
