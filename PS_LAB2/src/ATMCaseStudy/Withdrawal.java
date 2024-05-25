@@ -50,10 +50,13 @@ public class Withdrawal extends Transaction {
 					} // end if
 					else {
 						screen.displayMessageLine("\nInsufficient cash available in the ATM." + "\n\nPlease choose a smaller amount.");
+						return;
+
 					}
 				}// end if
 					else {
 						screen.displayMessageLine("\nInsufficient funds in your account." + "\n\nPlease choose a smaller amount.");
+						return;
 					} // end else
 				}// end if
 				else {
