@@ -68,7 +68,9 @@ public class WithdrawalTest {
 	public void testExecuteWithdrawalInvalidInput() {
 		keypad.setInvalidInput(true); // Simulate invalid input
 		withdrawal.execute();
-		assertEquals("Invalid input. Canceling transaction...\n", screen.getMessages());
+		assertEquals("\nWithdrawal menu:\n" + "1 - $20\n" + "2 - $40\n" + "3 - $60\n" + "4 - $100\n" + "5 - $200\n"
+				+ "6 - Cancel transaction\n\n" + "Choose a withdrawal amount: " + "\nInvalid input. Canceling transaction...\n",
+				screen.getMessages());
 		assertEquals(0.0, bankDatabase.getBalance(12345), 0.01);
 	}
 }
