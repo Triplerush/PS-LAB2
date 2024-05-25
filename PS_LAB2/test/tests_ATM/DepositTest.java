@@ -53,6 +53,7 @@ public class DepositTest {
 	public void testExecuteDepositInvalidInput() {
 		keypad.setInvalidInput(true);
 		deposit.execute();
-		assertEquals("Invalid input. Canceling transaction...\n", screen.getMessages());
+		assertEquals("\nPlease enter a deposit amount in CENTS (or 0 to cancel): " + "\nInvalid input. Canceling transaction...\n",
+				screen.getMessages());
 	}
 }
